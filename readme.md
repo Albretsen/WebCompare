@@ -32,10 +32,25 @@ const compareWebContent = require('@asgeiralbretsen/webcompare');
 (async () => {
     const url = "https://example.com";
     const comparisons = [{
-        MonitorID: 1,
         Selector: "p.intro",
         Type: "text",
         Value: "Expected intro text"
+    }];
+
+    const changes = await compareWebContent(url, comparisons);
+    console.log(changes);
+})();
+```
+
+## Example: Comparing Attributes
+
+```
+(async () => {
+    const url = "https://example.com";
+    const comparisons = [{
+        Selector: "p.intro",
+        Type: "attribute",
+        Attributes: ["src"]
     }];
 
     const changes = await compareWebContent(url, comparisons);

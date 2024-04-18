@@ -29,7 +29,6 @@
  * Represents a monitor with its comparison details.
  * 
  * @typedef {Object} Monitor
- * @property {number} MonitorID - The ID of the monitor.
  * @property {string} Selector - The CSS selector for the element.
  * @property {string} Type - The type of comparison ('text', 'attribute', 'style', 'children', 'custom').
  * @property {Array<string>} Attributes - The list of attributes to compare, relevant if Type is 'attribute'.
